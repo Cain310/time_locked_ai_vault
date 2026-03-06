@@ -1,0 +1,19 @@
+{
+  "name": "time-locked-vault-scripts",
+  "version": "1.0.0",
+  "description": "TypeScript client scripts for the Time-Locked Vault on Sui",
+  "type": "module",
+  "scripts": {
+    "deploy": "tsx deploy.ts",
+    "manage": "tsx manage_vault.ts",
+    "trade": "tsx execute_trade.ts"
+  },
+  "dependencies": {
+    "@mysten/sui": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0"
+  }
+}

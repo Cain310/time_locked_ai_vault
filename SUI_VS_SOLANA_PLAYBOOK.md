@@ -1,8 +1,8 @@
-# Sui vs Solana — Interview Playbook
+# Sui vs Solana — Architecture Comparison
 
-## The Definitive Cheat Sheet for a Solana Veteran Interviewing at Mysten Labs
+## A Comprehensive Reference for Solana Engineers Learning Sui Move
 
-> This document maps **every major Solana architectural pattern** you know to its Sui equivalent. Use this to instantly translate your 5 years of Solana experience into Sui fluency during the interview. Each section includes the Solana pattern, the Sui equivalent, and a **talking point** — the exact angle to present to demonstrate you've internalized the paradigm shift.
+> This document maps **every major Solana architectural pattern** to its Sui equivalent. Use this to translate deep Solana experience into Sui fluency. Each section includes the Solana pattern, the Sui equivalent, and a **key insight** — highlighting the paradigm shift between the two ecosystems.
 
 ---
 
@@ -21,7 +21,7 @@
 11. [Upgradeability: BPF Loader vs Sui Upgrade Policies](#11-upgradeability-bpf-loader-vs-sui-upgrade-policies)
 12. [Client-Side: web3.js vs Sui TypeScript SDK](#12-client-side-web3js-vs-sui-typescript-sdk)
 13. [Quick Reference Table](#13-quick-reference-table)
-14. [Interview Power Phrases](#14-interview-power-phrases)
+14. [Key Insights Summary](#14-key-insights-summary)
 
 ---
 
@@ -808,9 +808,9 @@ await client.signAndExecuteTransaction({ signer: keypair, transaction: tx });
 
 ---
 
-## 14. Interview Power Phrases
+## 14. Key Insights Summary
 
-Use these to demonstrate paradigm fluency during the code walkthrough:
+Core paradigm shifts, distilled:
 
 ### On Capabilities
 > "The `DelegatedTradingCap` is not an access control *check* — it's an access control *object*. Possession is proof. No seed derivation, no account lookup, no signature verification beyond what validators do natively."
@@ -831,7 +831,7 @@ Use these to demonstrate paradigm fluency during the code walkthrough:
 > "The `FlashLoanReceipt` has no abilities — no key, no store, no copy, no drop. The compiler literally rejects any code path that doesn't consume it through the repayment function. This is security at the type system level — something fundamentally impossible in Solana's account model."
 
 ### On MVR
-> "I use `@mysten/deepbook-v3` as MY target instead of a 64-character hex address. The MVR plugin resolves it at build time. This means when DeepBook upgrades their package, my client code automatically routes to the latest version without a code change. Manos built this system specifically to solve the version management problem in PTB construction."
+> "I use `@mysten/deepbook-v3` as my target instead of a 64-character hex address. The MVR resolves it at build time. This means when DeepBook upgrades their package, client code automatically routes to the latest version without a code change. The MVR system was built specifically to solve the version management problem in PTB construction."
 
 ---
 

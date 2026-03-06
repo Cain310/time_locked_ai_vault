@@ -26,7 +26,7 @@ const AGENT: address = @0xB;
 //
 // Each test constructs a specific violation condition and
 // proves the system correctly aborts with the precise error
-// code. These are the MOST CRITICAL tests for the interview.
+// code. These are the MOST CRITICAL tests for security validation.
 //
 // authenticate_trade assertion ordering (cheapest first):
 //   1. cap.vault_id == object::id(vault)       → EInvalidVault  (3)

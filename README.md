@@ -115,7 +115,7 @@ time_locked_vault/
 ├── README.md                          # This file
 ├── ARCHITECTURE_AND_CAPABILITIES.md   # Deep dive into struct definitions & ownership
 ├── SUI_MOVE_BEST_PRACTICES.md         # Style guide and coding standards
-└── SUI_VS_SOLANA_PLAYBOOK.md          # Interview cheat sheet
+└── SUI_VS_SOLANA_PLAYBOOK.md          # Solana-to-Sui comparison reference
 ```
 
 ---
@@ -250,7 +250,7 @@ The owner calls `revoke_all_delegations` which increments `vault.version`. All o
 |---|---|
 | [`ARCHITECTURE_AND_CAPABILITIES.md`](ARCHITECTURE_AND_CAPABILITIES.md) | Deep dive into struct definitions, object ownership, capability lifecycle |
 | [`SUI_MOVE_BEST_PRACTICES.md`](SUI_MOVE_BEST_PRACTICES.md) | Style guide, coding standards, anti-patterns to avoid |
-| [`SUI_VS_SOLANA_PLAYBOOK.md`](SUI_VS_SOLANA_PLAYBOOK.md) | Interview cheat sheet mapping Solana patterns to Sui equivalents |
+| [`SUI_VS_SOLANA_PLAYBOOK.md`](SUI_VS_SOLANA_PLAYBOOK.md) | Comprehensive reference mapping Solana patterns to Sui equivalents |
 
 ---
 

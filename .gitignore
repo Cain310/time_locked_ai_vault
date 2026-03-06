@@ -18,3 +18,6 @@ build/
 # Node (for scripts/)
 node_modules/
 scripts/dist/
+
+# Private docs
+*.pdf

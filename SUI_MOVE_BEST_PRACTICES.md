@@ -285,12 +285,12 @@ public fun execute_swap(
 
 ## 6. Capability Pattern Standards
 
-### 6.1 The Manos Pattern — Capabilities with Embedded State
+### 6.1 Capabilities with Embedded State
 
-From Sui Basecamp 2024, Manos Liolios' framework for capability design:
+From Sui Basecamp 2024, the canonical framework for capability design:
 
 ```move
-// ✅ THE MANOS PATTERN: Constraints embedded in the capability struct
+// ✅ BEST PRACTICE: Constraints embedded in the capability struct
 public struct DelegatedTradingCap has key, store {
     id: UID,
     vault_id: ID,
@@ -499,7 +499,7 @@ public fun execute_trade_internal(...) {
 
 ## 10. Hot Potato Pattern Reference
 
-While our vault project does not directly implement a Hot Potato, understanding this pattern is essential for discussing DeepBook V3's flash loan architecture during the interview.
+While our vault project does not directly implement a Hot Potato, understanding this pattern is essential for understanding DeepBook V3's flash loan architecture.
 
 ### 10.1 What Is a Hot Potato?
 
@@ -534,7 +534,7 @@ public fun return_flash_loan(
 }
 ```
 
-### 10.3 Interview Talking Point
+### 10.3 Key Insight
 
 > "In Solana, flash loan security relies on CPI callbacks and post-execution balance checks — those are runtime guards that can be accidentally omitted. In Move, the Hot Potato pattern makes incorrect usage a **compile-time error**. The Move Bytecode Verifier rejects any transaction that doesn't properly consume the receipt. Security is enforced by the type system, not by the developer's discipline."
 

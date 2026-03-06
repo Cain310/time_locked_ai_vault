@@ -24,7 +24,7 @@ The AI agent **never holds tokens**. It holds a *capability object* that authori
 
 ## 2. Access Control: The Capability Architecture
 
-This is the centerpiece of the design and directly implements the patterns Manos Liolios advocated at Sui Basecamp 2024: **no hardcoded admin addresses, capabilities as first-class objects with embedded state**.
+This is the centerpiece of the design and directly implements the patterns advocated at Sui Basecamp 2024: **no hardcoded admin addresses, capabilities as first-class objects with embedded state**.
 
 ### 2.1 `OwnerCap` — Absolute Authority
 
@@ -121,7 +121,7 @@ Rather than requiring the owner to locate and destroy each `DelegatedTradingCap`
 - The owner calls `revoke_all_delegations(&OwnerCap, &mut Vault)` which simply increments `vault.version`
 - **All** outstanding caps are instantly invalidated in O(1) — no iteration, no gas scaling with cap count
 
-This is a pattern Manos specifically advocates: using on-chain version registries to invalidate capabilities universally.
+This is a well-established Sui pattern: using on-chain version registries to invalidate capabilities universally.
 
 ---
 
@@ -177,7 +177,7 @@ sequenceDiagram
 
 ### 3.3 Consensus Path Analysis
 
-This is a key talking point for the interview:
+This is a key architectural insight:
 
 | Object | Type | Consensus Path | Why |
 |---|---|---|---|
@@ -215,7 +215,7 @@ This returns three values: leftover base asset, received quote asset, and remain
 
 ## 4. Solana Contrast: Why Object-Centric Wins
 
-As a 5-year Solana veteran, this section maps the mental model shift from Solana's account-based architecture to Sui's object-centric paradigm. This is structured as interview ammunition.
+From the perspective of a Solana veteran, this section maps the mental model shift from Solana's account-based architecture to Sui's object-centric paradigm.
 
 ### 4.1 Delegation: PDA Seeds vs. Capability Objects
 

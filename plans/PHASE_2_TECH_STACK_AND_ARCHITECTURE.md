@@ -426,7 +426,7 @@ We will use the **MVR plugin** to resolve package addresses dynamically rather t
 
 ### 3.2 MVR Plugin Integration
 
-The Move Registry plugin is the targeted "Manos flex" — it replaces hardcoded 64-character hex package addresses with human-readable names. This directly demonstrates appreciation for the infrastructure Manos built.
+The Move Registry plugin replaces hardcoded 64-character hex package addresses with human-readable names, demonstrating best-practice usage of Sui's ecosystem tooling.
 
 ```typescript
 import { Transaction } from '@mysten/sui/transactions';
@@ -715,7 +715,7 @@ fun test_full_delegation_lifecycle() {
 
 ### 4.4 Tier 3: Negative Tests — The Security Proofs
 
-These are the **most important tests for the interview**. Each one intentionally attempts an unauthorized action and proves the system correctly rejects it.
+These are the **most important tests for security validation**. Each one intentionally attempts an unauthorized action and proves the system correctly rejects it.
 
 ```move
 #[test_only]
