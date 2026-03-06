@@ -19,5 +19,12 @@ build/
 node_modules/
 scripts/dist/
 
+# Environment variables (NEVER commit secrets)
+.env
+scripts/.env
+
+# Private keys
+*.key
+
 # Private docs
 *.pdf

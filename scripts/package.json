@@ -6,9 +6,12 @@
   "scripts": {
     "deploy": "tsx deploy.ts",
     "manage": "tsx manage_vault.ts",
-    "trade": "tsx execute_trade.ts"
+    "trade": "tsx execute_trade.ts",
+    "agent": "tsx run_agent.ts",
+    "agent:live": "EXECUTE_REAL_TRADES=true tsx run_agent.ts"
   },
   "dependencies": {
+    "@mysten/deepbook-v3": "^1.1.5",
     "@mysten/sui": "^2.6.0"
   },
   "devDependencies": {
