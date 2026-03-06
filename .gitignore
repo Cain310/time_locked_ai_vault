@@ -1,0 +1,20 @@
+# Move build artifacts
+build/
+
+# Move dependency cache
+.move/
+
+# Backup files
+*.bak
+
+# OS files
+.DS_Store
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Node (for scripts/)
+node_modules/
+scripts/dist/

@@ -1,0 +1,10 @@
+[package]
+name = "time_locked_vault"
+edition = "2024.beta"
+
+# Sui >= 1.45: Sui, Bridge, MoveStdlib, and SuiSystem are imported implicitly
+[dependencies]
+deepbook = { git = "https://github.com/MystenLabs/deepbookv3.git", subdir = "packages/deepbook", rev = "main" }
+
+[addresses]
+time_locked_vault = "0x0"
